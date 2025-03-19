@@ -1,0 +1,7 @@
+variables = se almacena en la ram, la variables siempre tienen nombres en la cual se le asigna algun dato
+entrada ---> proceso ---> salida
+int siempre que tenga que hacer cuentas
+float para los casos con coma , 
+
+ENTRADA-------->PROCESO-------->SALIDA
+INPUT           operacion       print

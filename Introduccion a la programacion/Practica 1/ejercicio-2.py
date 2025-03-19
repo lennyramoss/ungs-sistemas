@@ -9,6 +9,7 @@ x = int(input("Ingrese el valor de x "))
 y = int(input("Ingrese el valor de y "))
 resultado = (x+y) / (x-y)
 print  (resultado)
+# no funciona la division por 0
 
 print ("la cuenta es (x+y/z) / (x-y/z)")
 x = int(input("Ingrese el valor de x "))
