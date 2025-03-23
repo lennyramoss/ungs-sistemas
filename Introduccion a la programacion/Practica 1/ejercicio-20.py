@@ -7,9 +7,4 @@ aux2=z
 x = y
 y = aux2
 z=aux1
-
-
-
 print("Valores alterados",x,y,z)
-
-
