@@ -5,7 +5,6 @@ if a>b:
 else: 
     print(b)
 
-
 if a>b:
     print(b)
 else: 

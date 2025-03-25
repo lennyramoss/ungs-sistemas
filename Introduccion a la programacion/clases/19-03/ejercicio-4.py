@@ -10,4 +10,3 @@ elif nf >=4 and nf <7:
     print("Vas a final")
 else:
     print("Promocionaste")
-
