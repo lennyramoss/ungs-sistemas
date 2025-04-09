@@ -5,3 +5,38 @@ float para los casos con coma ,
 
 ENTRADA-------->PROCESO-------->SALIDA
 INPUT           operacion       print
+
+
+Condicionales 
+Tienen que devolver verdadero o falso
+la condicion que tenga que guardar se llama GUARDA
+
+si (condición)
+    operación1
+sino (NO SIEMPRE ES NECESARIO)
+    operación2
+
+(n1>n2) n1 es mayor q n2
+(n1<n2) n1 es menor q n2
+(n1<=10)
+(n1>=10)
+(n1==10)
+(n1==20)
+(20=="20")#al ser dos datos distintos va a mostrar false
+(2!="2")#el 2 no es igual al string de 2
+
+and, or, not
+
+and: las dos tienen que ser verdaderas
+CONDICION 1|AND|CONDICION 2
+       V   | V |   V   
+       V   | F |   F
+       F   | F |   V
+       F   | F |   F
+
+or: una de las dos debe ser verdadera
+CONDICION 1|OR|CONDICION 2
+       V   | V |   V   
+       V   | V |   F
+       F   | V |   V
+       F   | F |   F

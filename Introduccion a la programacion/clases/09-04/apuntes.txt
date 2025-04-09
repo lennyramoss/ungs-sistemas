@@ -1,0 +1,24 @@
+RANGE
+print("hola")
+range(inicio,fin,paso)
+range(1,10,1)
+1-2-3-4-5-6-7-8-9
+
+
+range(1,6,2)
+1-3-5
+
+range(6) si pongo un solo parametro seria el fin 
+0-1-2-3-4-5
+
+range(2,7) con dos paramametros seria inicio y fin
+
+EL NUMERO FINAL NO LO TOCA 
+FOR
+
+BREAK ES MALA PRACTICA
+
+comenzar las variables en 0
+entocnes siempre hay que poner 0 en las variables de control?
+SIEMPRE SE PUEDE RESOLVER CON WHILE, PERO NO SIEMPRE CON FOR
+cuando no se cuantas veces tengo que ciclar, se usa while
