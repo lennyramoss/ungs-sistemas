@@ -1,9 +1,12 @@
 import random
-n = random.randrange(1,101)
-i=0
-x = 0
-for i in range(1,4):
-    if x==n:
-        x  = int(input("Adivine el numero"))
-    else:
-        print("No adivinaste")
+a= random.randint(1,100)
+print("Adivina el numero del 1 al 100")
+print (a)
+
+while 100>=a:
+    for i in range(3):
+        dato = int(input("ADIVINA EL NUMERO: "))
+        if a==dato:
+            print("adivinaste")
+        else:
+            print("No adivinaste")
