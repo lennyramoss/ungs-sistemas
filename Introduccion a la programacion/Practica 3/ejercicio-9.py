@@ -35,10 +35,10 @@ while i<=n:
 #c)
 
 n = int(input("Ingrese el numero n "))
-i = 2
-resultado = 2
+i = 1
+resultado = 0
 
 while i<=n:
+    resultado = i**i
     print(resultado)
-    resultado = 2**i
     i+=1
