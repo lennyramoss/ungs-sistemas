@@ -1,30 +1,11 @@
 n = int(input("Ingrese la cantidad de terminos que desea usar "))
+denom = 1
 signo = 1
-veces = 1
-denom = n - 1
-termino = 0
-cont = 0
-
-
-for i in range (1,n):
-    if n % 2 == 0 :
-        veces = veces*(-1)
-    else:
-        veces = veces
-    termino = (veces)*(n + denom) 
-    cont = cont + termino
-print(termino)
-
-
-
-"""for i in range(1,n):
-    vece
-    denom = signo+2  
-    signo *= denom
-    pi = 1/signo
-    signo = -1
-    veces+=1
-print(pi)
-"""
-
-#la funcion modulo se pone como abs
+suma = 0
+for i in range (n): #llega hasta n. si ingreso 5, arranca en 0 y lo hace hasta 4(ej)
+    cuenta = (1*signo)/denom
+    suma += cuenta
+    denom = denom+2 #incrementa el valor de denominador +2
+    signo *= -1 #signo vale -1 asi la cuenta da negativa
+aproximacion_pi = suma * 4
+print(suma)

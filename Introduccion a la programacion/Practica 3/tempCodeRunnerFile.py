@@ -1,0 +1,1 @@
+n_ganador = random.randint(0,100)
