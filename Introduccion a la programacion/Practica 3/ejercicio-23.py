@@ -1,3 +1,4 @@
+
 for a in range(-10, 11):
     for b in range(-10, 11):
         for c in range(-10, 11):
@@ -7,5 +8,9 @@ for a in range(-10, 11):
                 print("Hay números repetidos")  
             elif a + b + c == a * b * c:
                 print(f"Solución encontrada: A = {a}, B = {b}, C = {c}")
+
+
+
+
 
                 #CAMBIAR PRINTS
