@@ -1,0 +1,21 @@
+def areaC(lado):
+    area = lado*lado
+    return(area) se usa para retornar el resultado, para usarla dsp
+
+lado = int(input("Ingrese el lado "))
+result= areaC(lado)
+
+print(result) O print(areaC(lado))
+
+
+si unicamente pide imprimir el resultado, pongo el print dentro de la funcion
+
+en cambio
+
+si esto lo uso a futuro, lo que busco es guardar el resultado en una variable, para luego poder usarla.
+Esto lo hago con el return, que me devuelve el valor a la variable
+
+ Para guardar nuestras propias funciones en un
+archivo, y poderlas llamar desde otro, debemos
+hacer lo siguiente:
+ from nombreArchivoFunciones import*
