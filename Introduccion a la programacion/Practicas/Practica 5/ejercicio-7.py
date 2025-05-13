@@ -3,9 +3,6 @@ def dondeAparece(lista,blanco):
         if lista[i] == blanco:
             return i
     return -1
-    
-
-
 
 enteros=[1,2,3,4]
 num = int(input("Ingrese un valor "))
