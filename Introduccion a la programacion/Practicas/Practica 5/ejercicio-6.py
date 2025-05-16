@@ -5,7 +5,6 @@ def elementoListaRepetido(primerLista,segundaLista):
 
 
 
-
 lista1 = [1,2,3,4]
 lista2 = [5,6,7,8]
 agregarNumero = int(input("Ingrese un numero "))
