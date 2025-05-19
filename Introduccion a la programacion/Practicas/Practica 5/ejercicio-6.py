@@ -1,7 +1,9 @@
 def elementoListaRepetido(primerLista,segundaLista):
-
-        
-
+    for i in range(0,len(primerLista)):
+        for j in range(0,len(segundaLista)):
+            if primerLista[i]==segundaLista[j]:
+                return True
+    return False
 
 
 
@@ -11,7 +13,7 @@ agregarNumero = int(input("Ingrese un numero "))
 lista2.append(agregarNumero)
 
 if elementoListaRepetido(lista1,lista2):
-    print("")
+    print("Tiene elementos repetidos")
 else:
-    print()
+    print("no tiene elementos repetidos")
 
