@@ -4,20 +4,19 @@ los que están entre el índice a y el índice b."""
 
 def maximoEntre(lista,a,b):
     mayor=0
-    if a<len(lista)>b: #if 0 <= a < len(lista) and 0 <= b < len(lista):
-        for numero in range(a,b):
-            if numero>mayor:
-                mayor=numero
-            return mayor
-    else: 
-        print("los valores a y b no estan dentro de la lista")
+    if a>0 and b<len(lista)-1:
+        return False
+    for i in range(a,b):
+        if lista[i]>mayor:
+            mayor=lista[i]
+    return mayor
 
 
+        
 
-
-numeros = [0,1,2,3,4,5]
-n1=int(input("Ingrese un numero "))
+numeros = [1,2,3,4,5,6]
+print(numeros)
+n1=int(input(f"Ingrese un numero "))
 n2=int(input("Ingrese otro numero "))
-
 maxAYB=maximoEntre(numeros,n1,n2)
-print(f"el mayor valoe  entre el indice1 a y b es {maxAYB}")
+print(f"el mayor valor entre el {n1} y {n2} es {maxAYB}")

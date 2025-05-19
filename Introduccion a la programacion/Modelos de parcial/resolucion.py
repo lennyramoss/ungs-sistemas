@@ -38,7 +38,7 @@ def palabraRand(palabra):
 
 print(palabraRand("veterinario"))
 
-#b
+"""#b
 def palabraRandRepetido(palabra):
     letras=[]
     letrasRandom=""
@@ -47,11 +47,11 @@ def palabraRandRepetido(palabra):
     for i in range(2):
         numRandom= random.randint(0,len(palabra)-1)
         if numRandom==numRandom:
-            numRandom-=1
         letrasRandom+=letras[numRandom]
     return palabra + letrasRandom
 
 
 print(palabraRandRepetido("pero"))
-
+"""
 #EJERCICIO 3
+
