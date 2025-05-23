@@ -3,7 +3,7 @@
 def primos(a):
     nPrimos=[]
     while len(nPrimos)<a:
-        for i in range(2,a*5):
+        for i in range(2):#tiene que empezar en 2
             cont=0
             for j in range(1,i+1):
                 if i%j==0:
