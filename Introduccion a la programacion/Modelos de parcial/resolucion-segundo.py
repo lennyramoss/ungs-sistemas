@@ -30,4 +30,32 @@ más se repite en la muestra). Luego que indique las posiciones en donde se encu
 estos elementos y por último que muestre toda la lista ingresada por el usuario. 
 """
 
+numeros=[]
+numVistos=[]
+cantidad = int(input("Ingrese la cantida de numeros "))
+for i in range(cantidad):
+    valores = int(input("Ingrese su numero "))
+    numeros.append(valores)
+print (numeros)
 
+
+
+    
+        
+
+
+#3
+palabra = input("Ingrese una palabra ").lower()
+ya_contadas = ""  # Para registrar las letras que ya analizamos
+
+for letra in palabra:# Recorre cada letra de la palabra ingresada
+    if letra != " " and letra not in ya_contadas:#que no sea un espacio y Que la letra no haya sido contada antes
+        contador = 0
+        for caracter in palabra:#recorre los caracteres de la palabra comparando con la letra del primer for
+            if caracter == letra: #si el caracter es igual a la letra del primer for
+                contador += 1 #suma 1
+        print(f"{letra} : {contador}")
+        ya_contadas += letra  # Marcamos la letra como ya contada
+          
+
+#4
