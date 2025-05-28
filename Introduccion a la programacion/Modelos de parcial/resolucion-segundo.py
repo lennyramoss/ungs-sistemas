@@ -32,12 +32,36 @@ estos elementos y por último que muestre toda la lista ingresada por el usuario
 
 numeros=[]
 numVistos=[]
+posNumeros=[]
+numerosModa=[]
+maxCont=0
+
 cantidad = int(input("Ingrese la cantida de numeros "))
 for i in range(cantidad):
     valores = int(input("Ingrese su numero "))
     numeros.append(valores)
-print (numeros)
 
+for valor in numeros:
+    if valor not in numVistos:
+        cont=0
+        numVistos.append(valor)
+    for v in numeros:
+        if valor == v:
+            cont+=1
+    if cont>maxCont:
+        maxCont=cont
+        numerosModa=[valor]
+    elif cont == maxCont: #Si encontramos otra moda con la misma cantidad máxima de repeticiones, la agregamos a la lista de modas.
+        numerosModa.append(valor)
+        
+for i in range(len(numeros)):
+    if numeros[i] in numerosModa: #cuando tal numero coincide con numeros moda
+        posNumeros.append(i)#va a dar la posicion del numero cuando coincidio con el numero moda 
+
+
+
+
+print(posNumeros,maxCont,numVistos,numeros,numerosModa)
 
 
     
