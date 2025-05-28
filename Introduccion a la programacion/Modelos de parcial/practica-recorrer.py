@@ -21,14 +21,37 @@ AltoNum=0
 for numero in numeros:
     if numero>AltoNum:
         AltoNum=numero
-        
+
 for i in range(len(numeros)):
     if numeros[i] == AltoNum:# probar que pasa si pongo altonum in numeros
         print(i)
 
 
 #2
+def prom(notas,aprob):
+    for nota in notas:
+        if nota>=aprob:
+            print("notas",nota)
+
 notas=[6,3,6,7,8,3,2,4,2,1,1,1,1,2,5,10]
-for nota in notas:
-    if nota>=7:
-        print("notas",nota)
+aprob=7
+prom(notas,aprob)
+
+
+#3
+
+def contarVocales(texto):
+    vocales=["a","e","i","o","u"]
+    vocalesPalabra=[]
+    for letra in texto:
+        if letra in vocales and letra not in vocalesPalabra:
+            vocalesPalabra.append(letra)
+
+    for vocal in vocalesPalabra:#da cada vocal
+        cont=0
+        for letra in texto:#recorre cada letra del texto
+            if letra==vocal:#pregnta si letra es igual a la VOCAL(INDIV) del for, esto lo que hace compara letra x letra si es igual a la vocal +1
+                cont+=1
+        print(vocal,cont)
+
+contarVocales("paleta")
