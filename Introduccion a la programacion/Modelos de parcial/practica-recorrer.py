@@ -43,15 +43,46 @@ prom(notas,aprob)
 def contarVocales(texto):
     vocales=["a","e","i","o","u"]
     vocalesPalabra=[]
+    textoSinEspacios = ""
+    texto = texto.lower()
+
     for letra in texto:
-        if letra in vocales and letra not in vocalesPalabra:
+        if letra != " ":#si la letra no es un espacio vacio
+            textoSinEspacios += letra.lower()#se cumple
+    print(textoSinEspacios)
+
+    for letra in textoSinEspacios:
+        if letra in vocales and letra not in vocalesPalabra:#agrega una sola vez la vocal
             vocalesPalabra.append(letra)
 
     for vocal in vocalesPalabra:#da cada vocal
         cont=0
-        for letra in texto:#recorre cada letra del texto
-            if letra==vocal:#pregnta si letra es igual a la VOCAL(INDIV) del for, esto lo que hace compara letra x letra si es igual a la vocal +1
+        for letra in textoSinEspacios:#recorre cada letra del texto
+            if letra==vocal:#pregunta si letra es igual a la VOCAL(INDIV) del for, esto lo que hace compara letra x letra si es igual a la vocal +1
                 cont+=1
         print(vocal,cont)
 
-contarVocales("paleta")
+contarVocales("EL AVION SE ESTRELLO")
+
+
+#4 Ingresá varias palabras y mostrale al usuario cuál es la más larga de todas.
+def long(lista):
+    palabrasLongs=[]
+    letrasMax=0
+
+    for palabra in lista:
+        cont=0
+        for letra in palabra:
+            cont+=1
+
+        if cont>letrasMax:
+            letrasMax=cont
+            palabrasLongs = [palabra]# Acá reemplazamos completamente la lista de palabras largas
+
+        elif cont==letrasMax:#si el cont actual es igual que la palabra con mas letras, lo agrega
+            palabrasLongs.append(palabra)  # agrega si tiene igual largo
+    print(palabrasLongs)
+
+
+palabras=["avion","perro","terremoto","libro","cuaderno","maleta","computadora","indio"]
+long(palabras)
