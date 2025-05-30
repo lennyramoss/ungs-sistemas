@@ -35,21 +35,42 @@ caso de tener más de 9999 páginas se mostrarán los últimos dígitos.  Ejempl
 Hacer una función que reciba el título y la cantidad de páginas de un libro y devuelva el código."""
 
 
-def codigoLibro(nombre):
+def codigoLibro(nombre,pags):
     noConsonantes=["a","e","i","o","u"]
     consonantesPalabra=[]
     codigo=""
+    pags = str(pags)
+    cero="0"
     
 
     #SIEMPRE QUE BUSCO VER SI LA LETRA APARECE MAS DE UNA SOLA VEZ
     #DEBO RECORRER CADA LETRA Y LUEGO HACER OTRO FOR QUE RECORRA TODAS LAS LETRAS
     for letra in nombre:
-        cont=0
-        for caracter in nombre:
-            if letra == caracter:
-                cont+=1
-            if cont==1:
-                consonantesPalabra.append(letra)
+        if letra not in noConsonantes:
+            consonantesPalabra.append(letra)
+    print(consonantesPalabra)
 
-codigoLibro("eternamente")
+    for letra in consonantesPalabra:
+        cont=0
+        for char in consonantesPalabra:
+            if letra == char:
+                cont+=1
+        if cont==1:
+            codigo+=letra
+    print(codigo)
+
+    if len(pags)==5 or len(pags)==6:
+        codigo+="9999"
+    elif len(pags)==4:
+        codigo+=pags
+    i=3
+    c=1        
+    while len(pags)<=i:
+        if len(pags)==i:
+            codigo+=cero*c+pags
+        i-=1
+        c+=1
+    print(codigo)
+
+codigoLibro("eternamente",123)
 
