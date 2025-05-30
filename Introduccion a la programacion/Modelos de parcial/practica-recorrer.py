@@ -86,3 +86,12 @@ def long(lista):
 
 palabras=["avion","perro","terremoto","libro","cuaderno","maleta","computadora","indio"]
 long(palabras)
+
+
+
+#Escribí un programa que reciba una lista de palabras y muestre:
+cant=int("ingrese la cantidad de palabras que va a ingresar ")
+for i in range(len(cant)):
+    palabras= str(input("Ingrese las palabras "))
+
+for 

@@ -73,4 +73,35 @@ def codigoLibro(nombre,pags):
     print(codigo)
 
 codigoLibro("eternamente",123)
+"""3
+Desarrollar una función que reciba una lista de clientes activos y el mes,
+ calcule cuántos puntos tiene cada cliente según 
+ su uso de cuenta corriente y tarjeta de crédito, y luego determine y
+ muestre al ganador del sorteo mensual usando la función ganador."""
 
+def chances(clientes,mes):
+    puntosClientes=[]
+    
+    for cliente in clientes:
+        puntos=0
+           
+        if "CC" in productosCliente(cliente):
+            if saldoCuentaCorriente(cliente,mes)>=0:
+                puntos+=5
+            else:
+                puntos-=10
+
+        if "TAR" in productosCliente(cliente):
+            for compra in comprasConTarjeta(cliente,mes):
+                puntos+=1
+                if compra>10000:
+                    puntos+=10
+
+        puntosClientes.append(puntos)
+
+    return puntosClientes
+
+mes="05-2025"
+listaPuntos=chances(listaClientes,mes)
+
+print("el cliente ganador es",ganador(listaClientes,listaPuntos)
