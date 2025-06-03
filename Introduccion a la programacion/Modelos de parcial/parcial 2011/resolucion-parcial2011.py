@@ -76,3 +76,29 @@ for lugar in listaTextoOculto:
             textoOculto+=abcd[j]
 
 
+
+#4
+
+for i in range(len(materias)):
+    cont=0
+    for preMateria in correlativas(materias[i]):
+        if aprobada(dni[i],preMateria):
+            cont+=1
+        else:
+            borrarLista.append(i)
+        if cont==len(correlativas(materias[i])):
+            if not controlaSuperposicion(dni[i],horario(preMateria)):
+                borrarLista.append(i)
+
+for numero in borrarLista:
+    max=0
+    for indice in borrarLista:
+        if numero>indice:
+            max=numero
+        borrarListaOrdenada.append(max)
+
+for indice in borrarListaOrdenadas:
+    dni.pop(indice)
+    materia.pop(indice)
+            
+

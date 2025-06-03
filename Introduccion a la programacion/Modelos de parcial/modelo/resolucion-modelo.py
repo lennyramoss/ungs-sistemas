@@ -53,3 +53,46 @@ propietario(patente): devuelve a quien le pertenece el automotor con dicha paten
 El programa debe devolver el nombre del propietario del automotor y la cámara donde se lo encontró o 
 indicar que no se lo encontró en ese municipio."""
 
+"""4  8 comisiones en 3 turnos 
+el estudiantes debe elegir el turno y si hay vacante se le asigna una comision de ese turno
+a) Hacer una función que reciba el turno deseado y las listas con la información de las comisiones, si hay 
+vacante deberá descontarla de la lista de cantidad de alumnos  disponibles de esa comisión y devolver la 
+comisión asignada. SI no hay ninguna vacante disponible, deberá devolver 0."""
+def checkTurno(turnosSolicitado,turnos,cantidad):
+    for i in range(len(cantidad)):
+        if turnosSolicitado == turnos[i]:
+            if cantidad[i]-1>0:
+                cantidad[i]=cantidad[i]-1 #IMPORTANTE COMO SE RESTA A UN VALOR X DE LA LISTA
+                return cantidad
+            return 0
+              
+
+
+ComisionesHabilitadas=[1,2,3,4,5,6,7,8]
+TurnoDeCadaComision  =["M","T","N","M","N","T","N","M"]
+CantidadAlumPorComision=  [80,80,60,50,40,50,50,40]
+pedidoTurno= str(input("Elegi entre turno mañana,tarde,noche: ")).upper()
+
+print (checkTurno(pedidoTurno,TurnoDeCadaComision,CantidadAlumPorComision))
+
+#b) Realizar el programa principal que cuenta con una lista de DNIs y otra con los turnos elegidos e imprime 
+#en pantalla DNI y comisión asignada o DNI y sin vacante. 
+listaDni=[]
+listaTurnoDeseado=[]
+cant=int(input("ingrese la cantidad personas que desea anotar "))
+i=1
+while cant>=i:
+    dni=int(input("Ingrese el DNI "))
+    comision=str(input("Ingrese la comision que desea el dni(m,t,n) ")).upper()
+    listaDni.append(dni)
+    listaTurnoDeseado.append(comision)
+    i+=1
+
+for i in range(len(listaDni)):
+    if listaTurnoDeseado[i] == TurnoDeCadaComision[i]:
+        if CantidadAlumPorComision[i]-1>0:
+            CantidadAlumPorComision[i]=CantidadAlumPorComision[i]-1 #IMPORTANTE COMO SE RESTA A UN VALOR X DE LA LISTA
+            print(listaDni[i],ComisionesHabilitadas[i])
+    else:
+        print("no hay mas comisiones disponibles")
+        
